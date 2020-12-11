@@ -19,16 +19,25 @@ let speed = 0.1 * plusOrMinus;
 let radius = 400;
 let getLarger = radius / 2;
 
-let colors = ["black", "white", "black", "white","black","red", "black", "red" ];
+let colors = ["pink", "white", "black", "white","black","red", "black", "red" ];
 let speeds = [ 1,1,5,5,10,5,5,1,1];
 let radiusis = [radius ,radius ,radius ,radius ,radius + getLarger,radius ,radius + getLarger * 2 ,radius + getLarger * 2 ];
  
+
+
+//
+// function setup(){
+//     noCursor();
+// }
+//
+
+
 AutoColorFunction();
 startAutoRadiusFunction(); 
 // startAutoRadiusFunction();
+
+
 //          FUNCTIONS
-
-
 function stopAutoColorFunction() {
     clearInterval(autoColorVar);
 };
@@ -114,7 +123,6 @@ function radiusChange(){
 
 
 //      KEYBORD CONTROL
-
 document.body.onkeydown = function (anyKey) {
     // key c change color
     if (anyKey.which == 67) {
